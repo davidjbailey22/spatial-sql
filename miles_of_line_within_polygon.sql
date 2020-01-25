@@ -1,4 +1,4 @@
--- number of miles for each line within a specific polygon
+-- PostGIS - number of miles for each line within a specific polygon
 
 select sum(distinct x.miles) as total_miles
 from(select a.field1, a.geom, b.field1, b.geom,
