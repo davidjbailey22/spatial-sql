@@ -1,3 +1,5 @@
+-- PostGIS - get all points within a specific polygon
+
 SELECT a.*, b.*
 FROM schema.table1 a, schema.table2 b
 WHERE ST_WITHIN (a.point, b.polygon) and b.name = "Value";

@@ -1,3 +1,5 @@
+-- number of miles for each line within a specific polygon
+
 select sum(distinct x.miles) as total_miles
 from(select a.field1, a.geom, b.field1, b.geom,
 ST_LENGTH(ST_Transform(ST_SetSRID(a.geom, input srid), output srid))/5280 as miles
